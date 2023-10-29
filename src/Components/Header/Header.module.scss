@@ -3,7 +3,7 @@
 
 .header {
     color: #fff;
-    margin: auto 0 auto 40px;
+    margin: auto 0;
     font-family: 'Ubuntu', sans-serif;
 
     .container {
@@ -13,6 +13,7 @@
         align-items: center;
         grid-template-columns: repeat(2, 1fr);
         height: 60rem;
+        width: 90%;
         padding: 0;
         margin: auto;
     }
@@ -46,6 +47,43 @@
 
         p span {
             color: #6f129b;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr;
+            position: relative;
+            bottom: 50px;
+        }
+    
+        .model3d {
+          margin-top: 1rem;
+          display: none; /* Ajuste a margem superior para telas menores */
+        }
+    
+        .home {
+            width: 100%;
+            margin: auto;
+
+          .text {
+            font-size: 2rem; /* Ajuste o tamanho da fonte para telas menores */
+          }
+    
+          h1 {
+            font-size: 3rem;
+            font-weight: 500;
+            background: linear-gradient(120deg, $white 20%, $black 140%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+    
+          p {
+            font-size: 2rem; /* Ajuste o tamanho da fonte para telas menores */
+          }
         }
     }
 }

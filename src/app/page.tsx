@@ -15,9 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfólio - Rodrigo DEV</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
       </Head>
 
       {/* <Navbar /> */}

@@ -61,7 +61,7 @@
     
         .model3d {
           margin-top: 1rem;
-          display: none; /* Ajuste a margem superior para telas menores */
+          display: none;
         }
     
         .home {
@@ -69,7 +69,7 @@
             margin: auto;
 
           .text {
-            font-size: 2rem; /* Ajuste o tamanho da fonte para telas menores */
+            font-size: 2rem;
           }
     
           h1 {
@@ -82,7 +82,11 @@
           }
     
           p {
-            font-size: 2rem; /* Ajuste o tamanho da fonte para telas menores */
+            font-size: 2rem; 
+          }
+
+          p span {
+            font-size: 1.8rem;
           }
         }
     }

@@ -8,7 +8,7 @@ const Header = () => {
 
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ["Desenvolvedor web", "Freelancer", "Designer gráfico"], typeSpeed: 100, backSpeed: 60, loop: true
+            strings: ["Desenvolvedor web.", "Designer gráfico."], typeSpeed: 100, backSpeed: 60, loop: true
         })
     
 

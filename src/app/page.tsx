@@ -16,12 +16,10 @@ export default function Home() {
   const [showMainContent, setShowMainContent] = useState(false);
 
   useEffect(() => {
-    const gifImage = new Image();
-    gifImage.src = '/loading.gif';
-
-    gifImage.onload = () => {
+    // Simule um atraso de 5 segundos para mostrar o GIF de introdução
+    setTimeout(() => {
       setShowMainContent(true);
-    };
+    }, 400);
   }, []);
 
   return (
@@ -36,11 +34,7 @@ export default function Home() {
           </main>
         </div>
       ) : (
-        <img
-        src="/loading.gif"
-        className="introduction"
-        alt="Loading GIF"
-      />
+        <img src='/loading.gif' className='introduction'></img>
       )}
     </div>
   );

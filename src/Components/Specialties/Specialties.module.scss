@@ -6,7 +6,7 @@
   margin: auto 0;
   font-family: 'Ubuntu', sans-serif;
   height: auto; /* Remova a altura fixa para permitir que o conteúdo se expanda conforme necessário */
-  padding: 2rem 0; /* Aumente a margem superior para dar espaço ao cabeçalho fixo */
+  padding: 2rem 0 10rem; /* Aumente a margem superior para dar espaço ao cabeçalho fixo */
 
   h2 {
     text-align: center;
@@ -176,6 +176,8 @@
     }
 
     .skillsContent p {
+      border-top: 2px solid #6f129b;
+      padding-top: 15px;
       max-width: 90%; /* Aumente a largura máxima para telas maiores */
       font-size: 1rem; /* Reduz o tamanho da fonte para telas menores */
     }

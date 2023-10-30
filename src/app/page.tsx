@@ -10,22 +10,38 @@ import ContactMe from '@/Components/contactMe/contactMe'
 import Head from 'next/head'
 import '@/styles/mixins.scss'
 import '@/styles/variables.scss'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+  const [showMainContent, setShowMainContent] = useState(false);
 
-      {/* <Navbar /> */}
-      <Header />
-      <main>
-        <ScrollButton />
-        <Specialties />
-        <Experience />
-      </main>
-      {/* <ContactMe /> */}
-    </>
-  )
+  useEffect(() => {
+    const gifImage = new Image();
+    gifImage.src = '/loading.gif';
+
+    gifImage.onload = () => {
+      setShowMainContent(true);
+    };
+  }, []);
+
+  return (
+    <div>
+      {showMainContent ? (
+        <div>
+          <Header />
+          <main>
+            <ScrollButton />
+            <Specialties />
+            <Experience />
+          </main>
+        </div>
+      ) : (
+        <img
+        src="/loading.gif"
+        className="introduction"
+        alt="Loading GIF"
+      />
+      )}
+    </div>
+  );
 }
